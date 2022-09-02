@@ -1,0 +1,567 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 16px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: 'Gilroy';
+	background-color: #0B1D26;
+	background-image: url(../IMG/bg.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+/*--------------------*/
+
+/* font-family: 'Gilroy'; */
+/* font-family: 'Playfair Display', serif; */
+
+
+/* ============================ ШАПКА ================================================== */
+
+.header {
+	max-width: 1760px;
+	padding: 0px 28px;
+	box-sizing: content-box;
+	display: flex;
+	justify-content: space-between;
+	height: 38px;
+	margin: 0px auto;
+	padding-top: 64px;
+	margin: 0px 0px 198px 0px;
+
+}
+
+.header_logo {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	color: #FFFFFF;
+}
+
+
+
+.header_menu a {
+	position: relative;
+}
+
+.header_menu a::after {
+	position: absolute;
+	left: 0;
+	bottom: -15px;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #FBD784;
+	opacity: 0;
+	transition: all 0.2s ease-in;
+}
+
+
+.header_menu a:hover::after {
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #FBD784;
+	opacity: 1;
+}
+
+
+
+
+.menu-list {
+	display: flex;
+}
+
+.menu_item {}
+
+.menu_item:not(:last-child) {
+	margin: 0px 40px 0px 0px;
+}
+
+.menu_link {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 42px;
+	color: #FFFFFF;
+	transition: 0.2s ease-in;
+}
+
+.menu_link:hover {
+	color: #FBD784;
+}
+
+
+.header_account {
+	font-size: 17px;
+	line-height: 42px;
+	color: #FFFFFF;
+	transition: 0.2s ease-in;
+	background: url(/IMG/icons/account.svg) left no-repeat;
+	padding: 0 0 0 25px;
+}
+
+.header_account:hover {
+	position: relative;
+	color: #FBD784;
+}
+
+
+
+.header_account::after {
+	position: absolute;
+	left: 0;
+	bottom: -15px;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #FBD784;
+	opacity: 0;
+	transition: all 0.2s ease-in;
+}
+
+
+.header_account:hover::after {
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #FBD784;
+	opacity: 1;
+}
+
+/* ============================ БЛОК 1================================================== */
+
+.wrapper-hover {
+	transition: transform 0.8s cubic-bezier(0.765, 0.115, 0.270, 1.650);
+	padding-bottom: 363px;
+}
+
+.wrapper-hover:hover {
+	transform: translateY(-5%);
+}
+
+.main-hiking {
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+
+
+.main-hiking_guide {
+	position: relative;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #FBD784;
+	padding: 0 0 0 104px;
+	margin: 0 0px 32px 0;
+	letter-spacing: 6px;
+}
+
+.main-hiking_guide::before {
+	position: absolute;
+	left: 0px;
+	transform: translateY(10px);
+	display: block;
+	content: "";
+	width: 72px;
+	height: 2px;
+	background-color: #FBD784;
+}
+
+
+
+.main-hiking_text {
+	font-family: 'Playfair Display', serif;
+	font-weight: 600;
+	font-size: 88px;
+	line-height: 100px;
+	color: #FFFFFF;
+	margin: 0 0px 32px 0;
+}
+
+.main-hiking_scroll {
+	display: inline-block;
+	position: relative;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+	/* background: url(/IMG/icons/arrowdown.svg) left no-repeat; */
+}
+
+.main-hiking_scroll::after {
+	display: block;
+	position: absolute;
+	content: "";
+	background-image: url(/IMG/icons/arrowdown.svg);
+	right: -31px;
+	transform: translateY(10px);
+	top: -45%;
+	width: 16px;
+	height: 24px;
+}
+
+/* ============================ БЛОК 2================================================== */
+
+.container {
+	max-width: 1492px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	box-sizing: content-box;
+}
+
+.article {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 200px;
+}
+
+.article-text {
+	padding: 0px 70px 0px 133px;
+	/* padding-left: 150px; */
+	position: relative;
+}
+
+.article-text::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-50%);
+	display: block;
+	content: "01";
+	font-weight: 700;
+	font-size: 240px;
+	line-height: 240px;
+	color: #FFFFFF;
+	opacity: 0.1;
+	/* transform: translate(-153px, 134px); */
+}
+
+.article-title {
+	position: relative;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #FBD784;
+	padding: 0 0 0 104px;
+	margin: 0 0px 27px 0;
+	letter-spacing: 6px;
+}
+
+.article-title::before {
+	position: absolute;
+	left: 0px;
+	transform: translateY(10px);
+	display: block;
+	content: "";
+	width: 72px;
+	height: 2px;
+	background-color: #FBD784;
+}
+
+.article-subtitle {
+	font-family: 'Playfair Display', serif;
+	font-weight: 600;
+	font-size: 50px;
+	line-height: 130%;
+	color: #FFFFFF;
+	margin: 0 0px 32px 0;
+}
+
+.article-description {
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 178%;
+	/* or 178% */
+	color: #FFFFFF;
+	margin: 0 0px 27px 0;
+}
+
+.article-read-more {
+	display: inline-block;
+	position: relative;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FBD784;
+}
+
+.article-read-more::after {
+	display: block;
+	position: absolute;
+	content: "";
+	background-image: url(/IMG/icons/arrrowright.svg);
+	right: -35px;
+	transform: translateY(10px);
+	top: -29%;
+	width: 24px;
+	height: 16px;
+}
+
+
+
+
+/* ============================ БЛОК 3 ================================================== */
+
+.article-text2 {
+	padding: 0px 30px 0px 150px;
+	position: relative;
+}
+
+.article-text2::before {
+	position: absolute;
+	top: 0;
+	left: 30px;
+	transform: translateY(-50%);
+	display: block;
+	content: "02";
+	font-weight: 700;
+	font-size: 240px;
+	line-height: 240px;
+	color: #FFFFFF;
+	opacity: 0.1;
+	/* transform: translate(-153px, 134px); */
+}
+
+/* ============================ БЛОК 4 ================================================== */
+
+.article-text3 {
+	padding: 0px 70px 0px 133px;
+	position: relative;
+}
+
+.article-text3::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-50%);
+	display: block;
+	content: "03";
+	font-weight: 700;
+	font-size: 240px;
+	line-height: 240px;
+	color: #FFFFFF;
+	opacity: 0.1;
+	/* transform: translate(-153px, 134px); */
+}
+
+/* ============================ ПОДВАЛ ================================================== */
+
+.footer {
+	max-width: 1492px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	box-sizing: content-box;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 120px;
+}
+
+.footer-nav {
+	display: flex;
+	max-width: 566px;
+}
+
+.footer-copyright {}
+
+.header_logo {
+	margin: 0 0 24px 0px;
+}
+
+.footer-copyright-content {
+	max-width: 303px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.78;
+	color: #FFFFFF;
+	margin: 0 0 122px 0px;
+}
+
+.footer-copyright-terms {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.78;
+	color: #ffffff3b;
+}
+
+.footer-blog {
+	margin-right: 212px;
+}
+
+.footer-blog-title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.33;
+	color: #FBD784;
+	margin: 0 0 24px 0px;
+}
+
+.footer-blog-list {}
+
+.blog-list-item {}
+
+.blog-list-item:not(:last-child) {
+	margin: 0 0 16px 0px;
+}
+
+.blog-link {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.78;
+	color: white;
+}
+
+.footer-more {}
+
+.footer-more-title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.33;
+	color: #FBD784;
+	margin: 0 0 24px 0px;
+}
+
+.footer-more-list {}
+
+.more-list-item {}
+
+.more-list-item:not(:last-child) {
+	margin: 0 0 16px 0px;
+}
+
+.more_link {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 32px;
+	color: white;
+}
+
+
+.footer-nav a {
+	position: relative;
+}
+
+.footer-nav a::after {
+	position: absolute;
+	left: 0;
+	bottom: -15px;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #FFFFFF;
+	opacity: 0;
+	transition: all 0.2s ease-in;
+}
+
+
+.footer-nav a:hover::after {
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	display: block;
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: #FFFFFF;
+	opacity: 1;
+}
